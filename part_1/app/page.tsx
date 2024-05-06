@@ -3,7 +3,12 @@ import { Button } from "@/components/ui/button";
 import { useQuery } from "@tanstack/react-query";
 
 export default function Home() {
-  const { isPending, isError, data, error } = useQuery({
+  const {
+    isPending,
+    isError,
+    data: todosData,
+    error,
+  } = useQuery({
     queryKey: ["todos"],
     queryFn: async () => {
       const response = await fetch(
@@ -24,8 +29,12 @@ export default function Home() {
     return <span>Error: {error.message}</span>;
   }
 
-  const renderData = data.slice(0, 5).map((data: any) => {
-    return <div key={data.id}>{data.title}</div>;
+  const renderData = todosData.slice(0, 5).map((data: any) => {
+    return (
+      <div key={data.id} className="bg-red-400 py-[1px]">
+        {data.title}
+      </div>
+    );
   });
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
