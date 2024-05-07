@@ -1,0 +1,101 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "2024-05-07T16:26:49.116Z",
+      "title": "Do Laundry"
+    },
+    {
+      "id": "2024-05-07T16:26:52.827Z",
+      "title": "Do Laundry"
+    },
+    {
+      "id": "2024-05-07T16:26:54.119Z",
+      "title": "Do Laundry"
+    },
+    {
+      "id": "2024-05-07T16:26:55.401Z",
+      "title": "Do Laundry"
+    },
+    {
+      "id": "2024-05-07T16:27:54.628Z",
+      "title": "ali raza"
+    },
+    {
+      "id": "2024-05-07T16:31:49.201Z",
+      "title": "ali raza"
+    },
+    {
+      "id": "2024-05-07T16:31:50.661Z",
+      "title": "ali raza"
+    },
+    {
+      "id": "2024-05-07T16:31:52.230Z",
+      "title": "ali raza"
+    },
+    {
+      "id": "2024-05-07T16:31:52.254Z",
+      "title": "ali raza"
+    },
+    {
+      "id": "2024-05-07T16:31:52.712Z",
+      "title": "ali raza"
+    },
+    {
+      "id": "2024-05-07T16:31:59.484Z",
+      "title": "ali raza"
+    },
+    {
+      "id": "2024-05-07T16:32:01.532Z",
+      "title": "ali raza"
+    },
+    {
+      "id": "2024-05-07T16:32:02.489Z",
+      "title": "ali raza"
+    },
+    {
+      "id": "2024-05-07T16:34:40.516Z",
+      "title": "ali raza"
+    },
+    {
+      "id": "2024-05-07T16:35:01.958Z",
+      "title": "ali raza"
+    },
+    {
+      "id": "2024-05-07T16:35:03.573Z",
+      "title": "ali raza"
+    },
+    {
+      "id": "2024-05-07T16:35:04.231Z",
+      "title": "ali raza"
+    },
+    {
+      "id": "2024-05-07T16:35:04.543Z",
+      "title": "ali raza"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

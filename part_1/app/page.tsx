@@ -1,13 +1,16 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useIsFetching } from "@tanstack/react-query";
+import Todos from "./todos";
 
 export default function Home() {
+  const isFetching = useIsFetching();
   const {
     isPending,
     isError,
     data: todosData,
     error,
+    isSuccess,
   } = useQuery({
     queryKey: ["todos"],
     queryFn: async () => {
@@ -38,21 +41,21 @@ export default function Home() {
   if (isPending) {
     return <span>Loading...</span>;
   }
+  console.log(isFetching, "LLLLLLL");
 
   if (isError) {
     return <span>Error: {error.message}</span>;
   }
 
-  const renderData = todosData.slice(0, 5).map((data: any) => {
+  const renderData = todosData?.slice(0, 5).map((data: any) => {
     return (
       <div key={data.id} className="bg-red-400 py-[1px]">
         {data.title}
       </div>
     );
   });
-  console.log(userData);
 
-  const renderUserData = userData.slice(0, 5).map((data: any) => {
+  const renderUserData = userData?.slice(0, 5).map((data: any) => {
     return (
       <div key={data.id} className="bg-teal-400 py-[1px]">
         {data.id}
@@ -63,8 +66,8 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div>{renderData}</div>
+      <Todos />
       <div>{renderUserData}</div>
-      <Button variant="ghost">Button</Button>
     </main>
   );
 }
