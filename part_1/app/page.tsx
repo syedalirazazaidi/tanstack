@@ -20,6 +20,20 @@ export default function Home() {
       return response.json();
     },
   });
+  const { data: userData } = useQuery({
+    queryKey: ["users"],
+    queryFn: async () => {
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/users"
+      );
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    },
+    select: (users) =>
+      users.map((todo: any) => ({ id: todo.id, name: todo.name })),
+  });
 
   if (isPending) {
     return <span>Loading...</span>;
@@ -36,9 +50,20 @@ export default function Home() {
       </div>
     );
   });
+  console.log(userData);
+
+  const renderUserData = userData.slice(0, 5).map((data: any) => {
+    return (
+      <div key={data.id} className="bg-teal-400 py-[1px]">
+        {data.id}
+        {data.name}
+      </div>
+    );
+  });
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div>{renderData}</div>
+      <div>{renderUserData}</div>
       <Button variant="ghost">Button</Button>
     </main>
   );
