@@ -2,6 +2,7 @@
 import { Input } from "@/components/ui/input";
 
 import { useForm, SubmitHandler } from "react-hook-form";
+import { Schema } from "../types/schema";
 
 type Inputs = {
   example: string;
@@ -14,10 +15,10 @@ export default function Home() {
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm<Inputs>({ mode: "all" });
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  } = useForm<Schema>({ mode: "all" });
+  const onSubmit: SubmitHandler<Schema> = (data) => console.log(data);
 
-  console.log(watch("example"));
+  console.log(watch("name"));
 
   return (
     <form className=" " onSubmit={handleSubmit(onSubmit)}>
@@ -26,23 +27,23 @@ export default function Home() {
           <Input
             className="w-48 border-blue-900"
             defaultValue=""
-            {...register("example", {
+            {...register("name", {
               required: { value: true, message: "The email is required" },
             })}
           />
           <br />
-          {errors.example && <span>This field is required</span>}
+          {errors.name && <span>This field is required</span>}
         </div>
         <div className="flex flex-col">
           <Input
             className="w-48 border-blue-900"
             defaultValue=""
-            {...register("exampleRequired", {
+            {...register("email", {
               required: { value: true, message: "The email is required" },
             })}
           />
           <br />
-          {errors.exampleRequired && <span>This field is required</span>}
+          {errors.email && <span>This field is required</span>}
         </div>
       </div>
       <br />
