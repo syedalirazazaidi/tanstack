@@ -32,7 +32,7 @@ export default function Home() {
             })}
           />
           <br />
-          {errors.name && <span>This field is required</span>}
+          {/* {errors.name && <span>This field is required</span>} */}
         </div>
         <div className="flex flex-col">
           <Input
@@ -43,7 +43,7 @@ export default function Home() {
             })}
           />
           <br />
-          {errors.email && <span>This field is required</span>}
+          {/* {errors.email && <span>This field is required</span>} */}
         </div>
       </div>
       <br />
