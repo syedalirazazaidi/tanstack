@@ -14,7 +14,7 @@ export default function Home() {
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm<Inputs>();
+  } = useForm<Inputs>({ mode: "all" });
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
   console.log(watch("example"));
@@ -25,16 +25,21 @@ export default function Home() {
         <div className="flex flex-col">
           <Input
             className="w-48 border-blue-900"
-            defaultValue="test"
-            {...register("example")}
+            defaultValue=""
+            {...register("example", {
+              required: { value: true, message: "The email is required" },
+            })}
           />
           <br />
-          {errors.exampleRequired && <span>This field is required</span>}
+          {errors.example && <span>This field is required</span>}
         </div>
         <div className="flex flex-col">
           <Input
             className="w-48 border-blue-900"
-            {...register("exampleRequired", { required: true })}
+            defaultValue=""
+            {...register("exampleRequired", {
+              required: { value: true, message: "The email is required" },
+            })}
           />
           <br />
           {errors.exampleRequired && <span>This field is required</span>}
