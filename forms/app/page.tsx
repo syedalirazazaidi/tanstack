@@ -41,7 +41,10 @@ export default function Home() {
         <br />
         {errors.exampleRequired && <span>This field is required</span>}
       </div>
-      <input type="submit" className="bg-red-300 p-1 rounded text-[11px] hover:cursor-pointer"  />
+      <input
+        type="submit"
+        className="bg-red-300 p-1 rounded text-[11px] hover:cursor-pointer"
+      />
     </form>
   );
 }
