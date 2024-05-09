@@ -26,6 +26,7 @@ export default function Forms() {
       <div className="flex justify-center items-center gap-4 mt-5">
         <div className="flex flex-col">
           <Input
+            error={errors.name?.message}
             className="w-48 border-blue-900"
             defaultValue=""
             placeholder="name"
@@ -34,7 +35,7 @@ export default function Forms() {
             })}
           />
           <br />
-          {errors.name && <span>This field is required</span>}
+          {/* {errors.name && <span>This field is required</span>} */}
         </div>
         <div className="flex flex-col">
           <Input
@@ -46,7 +47,7 @@ export default function Forms() {
             })}
           />
           <br />
-          {errors.email && <span>This field is required</span>}
+          {/* {errors.email && <span>This field is required</span>} */}
         </div>
       </div>
       <br />
