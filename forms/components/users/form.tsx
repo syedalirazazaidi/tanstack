@@ -1,6 +1,14 @@
 "use client";
 import { Input } from "@/components/ui/input";
-
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Schema, schema } from "@/types/schema";
@@ -23,7 +31,7 @@ export default function Forms() {
 
   return (
     <form className=" " onSubmit={handleSubmit(onSubmit)}>
-      <div className="flex justify-center items-center gap-4 mt-5">
+      <div className="flex flex-col justify-center items-center mt-20">
         <div className="flex flex-col">
           <Input
             error={errors.name?.message}
@@ -31,7 +39,7 @@ export default function Forms() {
             defaultValue=""
             placeholder="name"
             {...register("name", {
-              required: { value: true, message: "The email is required" },
+              required: { value: true, message: "The name is required" },
             })}
           />
           <br />
@@ -40,7 +48,7 @@ export default function Forms() {
         <div className="flex flex-col">
           <Input
             className="w-48 border-blue-900"
-            defaultValue=""
+            error={errors.email?.message}
             placeholder="email"
             {...register("email", {
               required: { value: true, message: "The email is required" },
@@ -49,6 +57,22 @@ export default function Forms() {
           <br />
           {/* {errors.email && <span>This field is required</span>} */}
         </div>
+
+        <Select>
+          <SelectTrigger className="w-[210px]">
+            <SelectValue placeholder="Select a fruit" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectLabel>Fruits</SelectLabel>
+              <SelectItem value="apple">Apple</SelectItem>
+              <SelectItem value="banana">Banana</SelectItem>
+              <SelectItem value="blueberry">Blueberry</SelectItem>
+              <SelectItem value="grapes">Grapes</SelectItem>
+              <SelectItem value="pineapple">Pineapple</SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
       </div>
       <br />
       <div className=" flex flex-1 justify-center items-center mx-auto container">
