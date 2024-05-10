@@ -1,11 +1,11 @@
 "use client";
 
-import Forms from "../components/users/form";
+import UsersProvider from "../components/users/userProvider";
 
 export default function Home() {
   return (
     <>
-      <Forms />
+      <UsersProvider />
     </>
   );
 }
