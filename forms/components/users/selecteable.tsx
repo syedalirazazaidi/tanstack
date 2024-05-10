@@ -8,15 +8,18 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Controller } from "react-hook-form";
-export default function Selectable() {
+import { Controller, FieldValues, Path } from "react-hook-form";
+type Props<T extends FieldValues> = {
+  name: Path<T>;
+};
+export default function Selectable<T extends FieldValues>({ name }: Props<T>) {
   return (
     <Controller
       name="state"
-      control={control}
+      //   control={control}
       render={({ field: { onChange, value }, fieldState: { error } }) => (
         <div>
-          <Select onChange={onChange} value={value}>
+          <Select value={value}>
             <SelectTrigger>
               <SelectValue placeholder="Select a state" />
             </SelectTrigger>

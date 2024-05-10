@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { useForm, SubmitHandler, useFormContext } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Schema, schema } from "@/types/schema";
+import Selectable from "./selecteable";
 
 type Inputs = {
   example: string;
@@ -21,7 +22,7 @@ export default function Forms() {
   console.log(watch("name"));
 
   return (
-    <form className=" " onSubmit={handleSubmit(onSubmit)}>
+    <form className=" ">
       <div className="flex flex-col justify-center items-center mt-20">
         <div className="flex flex-col">
           <Input
@@ -48,8 +49,9 @@ export default function Forms() {
           <br />
           {/* {errors.email && <span>This field is required</span>} */}
         </div>
-
-      
+        <div className="w-52">
+          <Selectable<Schema> name="state" />
+        </div>
       </div>
       <br />
       <div className=" flex flex-1 justify-center items-center mx-auto container">
