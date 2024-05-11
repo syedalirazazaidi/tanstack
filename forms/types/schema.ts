@@ -13,3 +13,16 @@ export const schema = z.object({
 });
 
 export type Schema = z.infer<typeof schema>;
+export const defaultValues: Schema = {
+  // variant: "create",
+  email: "",
+  name: "",
+  state: "",
+  // languagesSpoken: [],
+  // gender: "",
+  // skills: [],
+  // registrationDateAndTime: new Date(),
+  // formerEmploymentPeriod: [new Date(), new Date()],
+  // salaryRange: [0, 2000],
+  // isTeacher: false,
+};

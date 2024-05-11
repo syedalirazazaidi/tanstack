@@ -50,7 +50,15 @@ export default function Forms() {
           {/* {errors.email && <span>This field is required</span>} */}
         </div>
         <div className="w-52">
-          <Selectable<Schema> name="state" />
+          <Selectable<Schema>
+            name="state"
+            label="states"
+            options={[
+              { id: "1", label: "aliraza", name: "kpk" },
+              { id: "2", label: "zaidi", name: "balochistan" },
+              { id: "3", label: "syed", name: "punjab" },
+            ]}
+          />
         </div>
       </div>
       <br />
