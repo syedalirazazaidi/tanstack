@@ -28,14 +28,13 @@ export default function Forms() {
           <Input
             error={errors.name?.message}
             className="w-48 border-blue-900"
-            defaultValue=""
             placeholder="name"
             {...register("name", {
               required: { value: true, message: "The name is required" },
             })}
           />
           <br />
-          {/* {errors.name && <span>This field is required</span>} */}
+          {errors.name && <span>This field is required</span>}
         </div>
         <div className="flex flex-col">
           <Input
@@ -47,7 +46,7 @@ export default function Forms() {
             })}
           />
           <br />
-          {/* {errors.email && <span>This field is required</span>} */}
+          {errors.email && <span>This field is required</span>}
         </div>
         <div className="w-52">
           <Selectable<Schema>

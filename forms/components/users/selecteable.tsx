@@ -28,6 +28,8 @@ export default function Selectable<T extends FieldValues>({
       name="state"
       control={control}
       render={({ field: { onChange, value, ref }, fieldState: { error } }) => {
+        console.log(error);
+
         return (
           <div>
             <Select onValueChange={onChange} defaultValue={value}>
@@ -38,7 +40,7 @@ export default function Selectable<T extends FieldValues>({
                 <SelectGroup>
                   <SelectLabel>State</SelectLabel>
                   {options?.map((option) => (
-                    <SelectItem key={option.id} value={option.name}>
+                    <SelectItem key={option.id} value={option.id}>
                       {option.name}
                     </SelectItem>
                   ))}
