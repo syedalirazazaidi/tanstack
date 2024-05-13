@@ -24,7 +24,21 @@ export default function Selectable<T extends FieldValues>({
   options,
   label,
 }: Props<T>) {
-  const { control, register } = useFormContext();
+  const {
+    control,
+    register,
+    watch,
+    handleSubmit,
+    formState: { errors },
+  } = useFormContext();
+  React.useEffect(() => {
+    const sub = watch((value) => {
+      console.log(value);
+    });
+    return () => sub.unsubscribe();
+  }, [watch]);
+
+  watch();
   return (
     <Controller
       name="state"
