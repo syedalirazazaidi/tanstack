@@ -15,6 +15,7 @@ export default function Forms() {
   const {
     register,
     watch,
+    handleSubmit,
     formState: { errors },
   } = useFormContext<Schema>();
   const onSubmit: SubmitHandler<Schema> = (data) => console.log(data);
@@ -22,7 +23,7 @@ export default function Forms() {
   console.log(watch("name"));
 
   return (
-    <form className=" ">
+    <form className=" " onSubmit={handleSubmit(onSubmit)}>
       <div className="flex flex-col justify-center items-center mt-20">
         <div className="flex flex-col">
           <Input
@@ -35,6 +36,15 @@ export default function Forms() {
           />
           <br />
           {errors.name && <span>This field is required</span>}
+        </div>
+        <div className="flex flex-col">
+          <Input
+            // error={errors.name?.message}
+            className="w-48 border-blue-900"
+            placeholder="middleName"
+            {...register("middleName")}
+          />
+          <br />
         </div>
         <div className="flex flex-col">
           <Input
@@ -51,13 +61,14 @@ export default function Forms() {
         <div className="w-52">
           <Selectable<Schema>
             name="state"
-            label="states"
+            label="state"
             options={[
               { id: "1", label: "aliraza", name: "kpk" },
               { id: "2", label: "zaidi", name: "balochistan" },
               { id: "3", label: "syed", name: "punjab" },
             ]}
           />
+          {errors.state && <span>This field is required</span>}
         </div>
       </div>
       <br />

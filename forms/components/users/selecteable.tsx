@@ -1,5 +1,7 @@
 "use client";
 import React from "react";
+import { ErrorMessage } from "@hookform/error-message";
+
 import {
   Select,
   SelectContent,
@@ -22,7 +24,7 @@ export default function Selectable<T extends FieldValues>({
   options,
   label,
 }: Props<T>) {
-  const { control } = useFormContext();
+  const { control, register } = useFormContext();
   return (
     <Controller
       name="state"
@@ -32,7 +34,11 @@ export default function Selectable<T extends FieldValues>({
 
         return (
           <div>
-            <Select onValueChange={onChange} defaultValue={value}>
+            <Select
+              {...register(label)}
+              onValueChange={onChange}
+              defaultValue={value}
+            >
               <SelectTrigger>
                 <SelectValue placeholder="Select a state" />
               </SelectTrigger>
@@ -45,14 +51,14 @@ export default function Selectable<T extends FieldValues>({
                     </SelectItem>
                   ))}
                 </SelectGroup>
-
-                {/* <SelectLabel>State</SelectLabel>
-
-                  <SelectItem value="kpk">KPK</SelectItem>
-                  <SelectItem value="balochistan">Balochistan</SelectItem>
-                  <SelectItem value="punjab">Punjab</SelectItem> */}
               </SelectContent>
             </Select>
+
+            <ErrorMessage
+              errors={error}
+              name="state"
+              render={({ message }) => <p>hi doyou sf{message}</p>}
+            />
           </div>
         );
       }}

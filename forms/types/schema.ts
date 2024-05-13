@@ -3,6 +3,7 @@ import { z } from "zod";
 
 export const schema = z.object({
   name: z.string().min(1, { message: "name is Required" }),
+  middleName: z.string().trim().optional(),
   email: z
     .string()
     .min(1, { message: "Email is required" })
@@ -18,6 +19,7 @@ export const defaultValues: Schema = {
   email: "",
   name: "",
   state: "",
+  middleName: "",
   // languagesSpoken: [],
   // gender: "",
   // skills: [],
