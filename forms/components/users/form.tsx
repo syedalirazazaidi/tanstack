@@ -5,6 +5,8 @@ import { useForm, SubmitHandler, useFormContext } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Schema, schema } from "@/types/schema";
 import Selectable from "./selecteable";
+import { useStates } from "@/services/queries";
+import ToggleButton from "./togglebutton";
 
 type Inputs = {
   example: string;
@@ -21,6 +23,7 @@ export default function Forms() {
   const onSubmit: SubmitHandler<Schema> = (data) => console.log(data);
 
   console.log(watch("name"));
+  const statesQuery = useStates();
 
   return (
     <form className=" " onSubmit={handleSubmit(onSubmit)}>
@@ -69,6 +72,17 @@ export default function Forms() {
             ]}
           />
           {errors.state && <span>This field is required</span>}
+        </div>
+        <div className="my-4">
+          <ToggleButton<Schema>
+            name="state"
+            label="state"
+            options={[
+              { id: "1", label: "english", language: "english" },
+              { id: "2", label: "urdu", language: "urdu" },
+              { id: "3", label: "german", language: "german" },
+            ]}
+          />
         </div>
       </div>
       <br />

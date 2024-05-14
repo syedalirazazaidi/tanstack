@@ -11,6 +11,7 @@ export const schema = z.object({
       message: "Email not valid",
     }),
   state: z.string().min(1, { message: "state is required" }),
+  languagesSpoken: z.array(z.string()),
 });
 
 export type Schema = z.infer<typeof schema>;
@@ -20,7 +21,7 @@ export const defaultValues: Schema = {
   name: "",
   state: "",
   middleName: "",
-  // languagesSpoken: [],
+  languagesSpoken: [],
   // gender: "",
   // skills: [],
   // registrationDateAndTime: new Date(),
