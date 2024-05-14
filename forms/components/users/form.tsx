@@ -7,6 +7,7 @@ import { Schema, schema } from "@/types/schema";
 import Selectable from "./selecteable";
 import { useStates } from "@/services/queries";
 import ToggleButton from "./togglebutton";
+import RadioButton from "./radiobutton";
 
 type Inputs = {
   example: string;
@@ -83,6 +84,9 @@ export default function Forms() {
               { id: "3", label: "german", language: "german" },
             ]}
           />
+        </div>
+        <div className="my-4">
+          <RadioButton />
         </div>
       </div>
       <br />
