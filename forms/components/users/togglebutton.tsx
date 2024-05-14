@@ -1,17 +1,17 @@
 import React from "react";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Controller, FieldValues, Path, useFormContext } from "react-hook-form";
-export type Option = { id: string; label: string; language: string };
+export type ToggleOption = { id: string; label: string; language: string };
 
 type Props<T extends FieldValues> = {
-  name: Path<T>;
-  options: Option[];
-  label: string;
+  language: Path<T>;
+  options: ToggleOption[];
+  languagelabel: string;
 };
 export default function ToggleButton<T extends FieldValues>({
-  name,
+  language,
   options,
-  label,
+  languagelabel,
 }: Props<T>) {
   const {
     control,
@@ -22,23 +22,23 @@ export default function ToggleButton<T extends FieldValues>({
   } = useFormContext();
   return (
     <Controller
-      name="name"
+      name="languagesSpoken"
       control={control}
       render={({ field: { onChange, value, ref }, fieldState: { error } }) => {
         console.log(error);
 
         return (
           <React.Fragment>
-            <div className="flex flex-col">{label}</div>
+            <div className="flex flex-col">{languagelabel}</div>
             <ToggleGroup
-              {...register(label)}
+              {...register(language)}
               onValueChange={onChange}
               defaultValue={value}
               variant="outline"
-              type="single"
+              type="multiple"
             >
               {options?.map((option) => (
-                <ToggleGroupItem multi key={option.id} value={option.id}>
+                <ToggleGroupItem key={option.id} value={option.id}>
                   {option.language}
                 </ToggleGroupItem>
               ))}
