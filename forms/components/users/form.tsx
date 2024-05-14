@@ -75,8 +75,8 @@ export default function Forms() {
         </div>
         <div className="my-4">
           <ToggleButton<Schema>
-            name="state"
-            label="state"
+            name="languagesSpoken"
+            label="languagesSpoken"
             options={[
               { id: "1", label: "english", language: "english" },
               { id: "2", label: "urdu", language: "urdu" },
