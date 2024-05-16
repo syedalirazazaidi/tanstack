@@ -31,15 +31,17 @@ export default function RadioButton<T extends FieldValues>({
         return (
           <div>
             <p>{label}</p>
-            <RadioGroup defaultValue="option-one">
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="option-one" id="option-one" />
-                <Label htmlFor="option-one">Option One</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="option-two" id="option-two" />
-                <Label htmlFor="option-two">Option Two</Label>
-              </div>
+            <RadioGroup
+              {...register(label)}
+              onValueChange={onChange}
+              defaultValue={value}
+            >
+              {options.map((option) => (
+                <div className="flex items-center space-x-2" key={option.id}>
+                  <Label htmlFor={option.id}>{option.gender}</Label>
+                  <RadioGroupItem value={option.id} id={option.id} />
+                </div>
+              ))}
             </RadioGroup>
           </div>
         );
