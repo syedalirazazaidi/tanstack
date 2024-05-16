@@ -8,6 +8,7 @@ import Selectable from "./selecteable";
 import { useStates } from "@/services/queries";
 import ToggleButton from "./togglebutton";
 import RadioButton from "./radiobutton";
+import { CheckboxBtn } from "./checkbox";
 
 type Inputs = {
   example: string;
@@ -95,6 +96,9 @@ export default function Forms() {
               { id: "3", label: "None", gender: "none" },
             ]}
           />
+        </div>
+        <div className="my-4">
+          <CheckboxBtn />
         </div>
       </div>
       <br />
