@@ -86,7 +86,15 @@ export default function Forms() {
           />
         </div>
         <div className="my-4">
-          <RadioButton />
+          <RadioButton<Schema>
+            name="gender"
+            label="gender"
+            options={[
+              { id: "1", label: "Male", gender: "male" },
+              { id: "2", label: "Femail", gender: "female" },
+              { id: "3", label: "None", gender: "none" },
+            ]}
+          />
         </div>
       </div>
       <br />
