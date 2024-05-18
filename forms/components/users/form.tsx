@@ -98,7 +98,15 @@ export default function Forms() {
           />
         </div>
         <div className="my-4">
-          <CheckboxBtn />
+          <CheckboxBtn<Schema>
+            name="skills"
+            label="skills"
+            options={[
+              { id: "1", label: "reactjs", skill: "Reactjs" },
+              { id: "2", label: "angular", skill: "Angular" },
+              { id: "3", label: "vue", skill: "Vue" },
+            ]}
+          />
         </div>
       </div>
       <br />
