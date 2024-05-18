@@ -107,6 +107,7 @@ export default function Forms() {
               { id: "3", label: "vue", skill: "Vue" },
             ]}
           />
+          {errors.skills && <span>not more then two field </span>}
         </div>
       </div>
       <br />
