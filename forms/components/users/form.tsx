@@ -10,6 +10,7 @@ import ToggleButton from "./togglebutton";
 import RadioButton from "./radiobutton";
 import { CheckboxBtn } from "./checkbox";
 import DateOfBirth from "./daaofbirth";
+import Switches from "./switch";
 
 type Inputs = {
   example: string;
@@ -114,6 +115,9 @@ export default function Forms() {
         </div>
         <div className="my-4">
           <DateOfBirth<Schema> name="dataBirth" label="dataBirth" />
+        </div>
+        <div className="my-4">
+          <Switches<Schema> name="isTeacher" label="are you a teacher" />
         </div>
       </div>
       <br />

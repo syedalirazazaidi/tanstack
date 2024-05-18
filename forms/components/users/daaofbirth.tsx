@@ -64,15 +64,6 @@ export default function DateOfBirth<T extends FieldValues>({
               />
             </PopoverContent>
           </Popover>
-          // <Calendar
-          //   captionLayout="dropdown-buttons"
-          //   fromYear={1990}
-          //   toYear={2024}
-          //   mode="single"
-          //   selected={value}
-          //   onSelect={onChange}
-          //   className="rounded-md border"
-          // />
         );
       }}
     />
