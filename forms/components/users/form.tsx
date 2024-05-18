@@ -113,7 +113,7 @@ export default function Forms() {
           </div>
         </div>
         <div className="my-4">
-          <DateOfBirth<Schema> name="dataOfbirth" label="dataOfbirth" />
+          <DateOfBirth<Schema> name="dataBirth" label="dataBirth" />
         </div>
       </div>
       <br />

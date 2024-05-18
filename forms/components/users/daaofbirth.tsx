@@ -29,8 +29,8 @@ export default function DateOfBirth<T extends FieldValues>({
         return (
           <Calendar
             mode="single"
-            selected={date}
-            onSelect={setDate}
+            selected={value}
+            onSelect={onChange}
             className="rounded-md border"
           />
         );
