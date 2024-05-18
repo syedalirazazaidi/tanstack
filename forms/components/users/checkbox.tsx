@@ -28,9 +28,9 @@ export function CheckboxBtn<T extends FieldValues>({
       render={({ field: { onChange, value, ref }, fieldState: { error } }) => {
         console.log(error, value);
         return (
-          <div className="flex flex-col items-center space-x-2">
+          <div className="flex flex-row items-center space-x-2">
             {options.map((option) => (
-              <div className="flex justify-center" key={option.id}>
+              <div className="flex justify-center  " key={option.id}>
                 <label
                   htmlFor={option.id}
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"

@@ -9,6 +9,7 @@ import { useStates } from "@/services/queries";
 import ToggleButton from "./togglebutton";
 import RadioButton from "./radiobutton";
 import { CheckboxBtn } from "./checkbox";
+import DateOfBirth from "./daaofbirth";
 
 type Inputs = {
   example: string;
@@ -86,28 +87,33 @@ export default function Forms() {
             ]}
           />
         </div>
-        <div className="my-4">
-          <RadioButton<Schema>
-            name="gender"
-            label="gender"
-            options={[
-              { id: "1", label: "Male", gender: "male" },
-              { id: "2", label: "Femail", gender: "female" },
-              { id: "3", label: "None", gender: "none" },
-            ]}
-          />
+        <div className="flex justify-center">
+          <div className="my-4">
+            <RadioButton<Schema>
+              name="gender"
+              label="gender"
+              options={[
+                { id: "1", label: "Male", gender: "male" },
+                { id: "2", label: "Femail", gender: "female" },
+                { id: "3", label: "None", gender: "none" },
+              ]}
+            />
+          </div>
+          <div className="my-4">
+            <CheckboxBtn<Schema>
+              name="skills"
+              label="skills"
+              options={[
+                { id: "1", label: "reactjs", skill: "Reactjs" },
+                { id: "2", label: "angular", skill: "Angular" },
+                { id: "3", label: "vue", skill: "Vue" },
+              ]}
+            />
+            {errors.skills && <span>not more then two field </span>}
+          </div>
         </div>
         <div className="my-4">
-          <CheckboxBtn<Schema>
-            name="skills"
-            label="skills"
-            options={[
-              { id: "1", label: "reactjs", skill: "Reactjs" },
-              { id: "2", label: "angular", skill: "Angular" },
-              { id: "3", label: "vue", skill: "Vue" },
-            ]}
-          />
-          {errors.skills && <span>not more then two field </span>}
+          <DateOfBirth />
         </div>
       </div>
       <br />

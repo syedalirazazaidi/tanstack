@@ -30,14 +30,14 @@ export default function RadioButton<T extends FieldValues>({
         console.log(error);
         return (
           <div>
-            <p>{label}</p>
             <RadioGroup
               {...register(label)}
               onValueChange={onChange}
               defaultValue={value}
+              className=" flex justify-between items-center gap-4"
             >
               {options.map((option) => (
-                <div className="flex items-center space-x-2" key={option.id}>
+                <div key={option.id}>
                   <Label htmlFor={option.id}>{option.gender}</Label>
                   <RadioGroupItem value={option.id} id={option.id} />
                 </div>
