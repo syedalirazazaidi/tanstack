@@ -32,31 +32,26 @@ export function CheckboxBtn<T extends FieldValues>({
             {options.map((option) => (
               <div className="flex justify-center" key={option.id}>
                 <label
-                  htmlFor="terms"
+                  htmlFor={option.id}
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  Skills
+                  {name}
                 </label>
                 <br />
-                <div className="flex justify-center gap-2">
-                  <Checkbox
-                    id={option.id}
-                    checked={value}
-                    onCheckedChange={onChange}
-                  />
-                </div>
+
+                <Checkbox
+                  checked={value?.includes(option.id)}
+                  onCheckedChange={(checked) => {
+                    return checked
+                      ? onChange([...value, option.id])
+                      : onChange(
+                          value?.filter((value: any) => value !== option.id)
+                        );
+                  }}
+                />
               </div>
             ))}
-            {/* <label
-              htmlFor="terms"
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            >
-              Skills
-            </label>
-            <br />
-            <div className="flex justify-center gap-2">
-              <Checkbox id="terms" />
-            </div> */}
+            <div></div>
           </div>
         );
       }}
