@@ -29,6 +29,7 @@ export default function Forms() {
     register,
     watch,
     handleSubmit,
+    control,
     formState: { errors },
   } = useFormContext<Schema>();
   const onSubmit: SubmitHandler<Schema> = (data) => console.log(data);
@@ -38,6 +39,8 @@ export default function Forms() {
 
   const { append, fields, remove, replace } = useFieldArray({
     name: "students",
+
+    control,
   });
 
   useEffect(() => {}, []);
