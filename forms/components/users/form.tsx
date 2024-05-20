@@ -32,21 +32,28 @@ export default function Forms() {
     watch,
     handleSubmit,
     control,
+    unregister,
     formState: { errors },
   } = useFormContext<Schema>();
   const onSubmit: SubmitHandler<Schema> = (data) => console.log(data);
 
   console.log(watch("name"));
   const statesQuery = useStates();
+  const isTeacher = useWatch({ control, name: "isTeacher" });
 
   const { append, fields, remove, replace } = useFieldArray({
     control,
     name: "students",
   });
 
-  useEffect(() => {}, []);
-  const isTeacher = useWatch({ control, name: "isTeacher" });
-  console.log(isTeacher, "ISTEACHER");
+  useEffect(() => {
+    if (!isTeacher) {
+      replace([]);
+      unregister("students");
+    }
+  }, [isTeacher, replace, unregister]);
+
+  console.log(errors);
 
   return (
     <form className=" " onSubmit={handleSubmit(onSubmit)}>
@@ -154,10 +161,9 @@ export default function Forms() {
                 className="w-12 flex justify-center border-blue-900"
                 placeholder="students"
                 {...register(`students.${index}.name`, {
-                  required: { value: true, message: "The name is required" },
+                  required: { value: true, message: "student name" },
                 })}
               />
-              {/* <RHFTextField<Schema> name={`students.${index}.name`} label="Name" /> */}
               <Button
                 color="error"
                 onClick={() => {
