@@ -1,7 +1,13 @@
 "use client";
 import { Input } from "@/components/ui/input";
 
-import { useForm, SubmitHandler, useFormContext } from "react-hook-form";
+import {
+  useForm,
+  useFormContext,
+  SubmitHandler,
+  useFieldArray,
+  useWatch,
+} from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Schema, schema } from "@/types/schema";
 import Selectable from "./selecteable";
@@ -11,6 +17,7 @@ import RadioButton from "./radiobutton";
 import { CheckboxBtn } from "./checkbox";
 import DateOfBirth from "./daaofbirth";
 import Switches from "./switch";
+import { useEffect } from "react";
 
 type Inputs = {
   example: string;
@@ -28,6 +35,12 @@ export default function Forms() {
 
   console.log(watch("name"));
   const statesQuery = useStates();
+
+  const { append, fields, remove, replace } = useFieldArray({
+    name: "students",
+  });
+
+  useEffect(() => {}, []);
 
   return (
     <form className=" " onSubmit={handleSubmit(onSubmit)}>
