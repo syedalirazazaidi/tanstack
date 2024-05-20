@@ -1,5 +1,6 @@
 "use client";
 import { Input } from "@/components/ui/input";
+import * as React from "react";
 
 import {
   useForm,
@@ -18,6 +19,7 @@ import { CheckboxBtn } from "./checkbox";
 import DateOfBirth from "./daaofbirth";
 import Switches from "./switch";
 import { useEffect } from "react";
+import { Button } from "../ui/button";
 
 type Inputs = {
   example: string;
@@ -38,12 +40,13 @@ export default function Forms() {
   const statesQuery = useStates();
 
   const { append, fields, remove, replace } = useFieldArray({
-    name: "students",
-
     control,
+    name: "students",
   });
 
   useEffect(() => {}, []);
+  const isTeacher = useWatch({ control, name: "isTeacher" });
+  console.log(isTeacher, "ISTEACHER");
 
   return (
     <form className=" " onSubmit={handleSubmit(onSubmit)}>
@@ -134,6 +137,38 @@ export default function Forms() {
         </div>
         <div className="my-4">
           <Switches<Schema> name="isTeacher" label="are you a teacher" />
+        </div>
+      </div>
+      <div className=" flex justify-center items-center flex-col ">
+        {isTeacher && (
+          <div>
+            <Button onClick={() => append({ name: "" })} type="button">
+              Add new student
+            </Button>
+          </div>
+        )}
+        <div className="my-4">
+          {fields.map((field, index) => (
+            <React.Fragment key={field.id}>
+              <Input
+                className="w-12 flex justify-center border-blue-900"
+                placeholder="students"
+                {...register(`students.${index}.name`, {
+                  required: { value: true, message: "The name is required" },
+                })}
+              />
+              {/* <RHFTextField<Schema> name={`students.${index}.name`} label="Name" /> */}
+              <Button
+                color="error"
+                onClick={() => {
+                  remove(index);
+                }}
+                type="button"
+              >
+                Remove
+              </Button>
+            </React.Fragment>
+          ))}
         </div>
       </div>
       <br />

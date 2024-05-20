@@ -25,7 +25,6 @@ export default function Switches<T extends FieldValues>({
       name="isTeacher"
       control={control}
       render={({ field: { onChange, value, ref }, fieldState: { error } }) => {
-        console.log(error);
         return (
           <div>
             <Switch checked={value} onCheckedChange={onChange} />
