@@ -10,7 +10,7 @@ import {
   useWatch,
 } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Schema, schema } from "@/types/schema";
+import { Schema, defaultValues, schema } from "@/types/schema";
 import Selectable from "./selecteable";
 import { useStates } from "@/services/queries";
 import ToggleButton from "./togglebutton";
@@ -32,6 +32,7 @@ export default function Forms() {
     watch,
     handleSubmit,
     control,
+    reset,
     unregister,
     formState: { errors },
   } = useFormContext<Schema>();
@@ -52,6 +53,10 @@ export default function Forms() {
       unregister("students");
     }
   }, [isTeacher, replace, unregister]);
+
+  const handleReset = () => {
+    reset(defaultValues);
+  };
 
   console.log(errors);
 
@@ -163,7 +168,10 @@ export default function Forms() {
                 {...register(`students.${index}.name`, {
                   required: { value: true, message: "student name" },
                 })}
+
+                // error={isTeacher && errors.students.0.message}
               />
+
               <Button
                 color="error"
                 onClick={() => {
@@ -183,6 +191,19 @@ export default function Forms() {
           type="submit"
           className=" bg-red-300 px-8 p-1 rounded text-[11px] hover:cursor-pointer"
         />
+        <input
+          className=" bg-red-300 px-8 p-1 rounded text-[11px] hover:cursor-pointer"
+          type="reset"
+          onClick={handleReset}
+        />
+        <div>
+          {/* <Button
+            className=" bg-red-300   rounded text-[11px] hover:cursor-pointer"
+            onClick={handleReset}
+          >
+            Reset Button
+          </Button> */}
+        </div>
       </div>
     </form>
   );
