@@ -6,10 +6,10 @@ export function useCreateUser() {
 
   return useMutation({
     mutationFn: async (data: Schema) => {
-      await axios.post(
-        "http://localhost:8080/users",
-        omit(mapData(data), "variant")
-      );
+      //   await axios.post(
+      //     "http://localhost:8080/users",
+      //     omit(mapData(data), "variant")
+      //   );
     },
 
     onSuccess: async () => {

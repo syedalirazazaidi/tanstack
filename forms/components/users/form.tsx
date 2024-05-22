@@ -34,6 +34,7 @@ export default function Forms() {
     control,
     reset,
     unregister,
+    getValues,
     formState: { errors },
   } = useFormContext<Schema>();
   const onSubmit: SubmitHandler<Schema> = (data) => console.log(data);
@@ -196,6 +197,7 @@ export default function Forms() {
           type="reset"
           onClick={handleReset}
         />
+        <button onClick={() => schema.parse(getValues())}>test btn</button>
         <div>
           {/* <Button
             className=" bg-red-300   rounded text-[11px] hover:cursor-pointer"
