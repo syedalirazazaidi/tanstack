@@ -1,0 +1,299 @@
+[33mcommit 03d15dc492ed2cdccddbd21df9f05a683c1d4cb0[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Wed May 22 17:45:51 2024 +0500
+
+    completed reathooks forms
+
+[33mcommit 1be11e383cac5138db88cec0fdc999a7292d26e8[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Wed May 22 17:08:54 2024 +0500
+
+    add types
+
+[33mcommit 15f4807cbe2dd41e82d53659657d8802dc1f93d9[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Wed May 22 16:47:29 2024 +0500
+
+    add reset button
+
+[33mcommit 9024f9fbd556544aa642bfd34abab85a71cf333d[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Tue May 21 00:21:01 2024 +0500
+
+    add forms
+
+[33mcommit 1947c4d6076335fdbbceb237f3f218d206cf992c[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Mon May 20 23:46:16 2024 +0500
+
+    play with objects
+
+[33mcommit ecff136ed0d57b5fc2eea18272764b154e3483a6[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Mon May 20 23:10:43 2024 +0500
+
+    add forms
+
+[33mcommit 5963c79a7848fb677886a8bb862b9b0ad44abb43[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Mon May 20 22:52:05 2024 +0500
+
+    add forms
+
+[33mcommit 93f4a6f583256d4d4c04d6e7647d10886283f676[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Mon May 20 22:36:11 2024 +0500
+
+    add descriminatedUnion
+
+[33mcommit 93298704ad9444faf40b1556d20b6ff762f320a2[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Sat May 18 23:29:23 2024 +0500
+
+    add switch field
+
+[33mcommit 36af698de99b8cf5e60aa6216eb3ab562a4bed6f[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Sat May 18 22:59:22 2024 +0500
+
+    add calender
+
+[33mcommit e3ab22ca85ddd1e9338cf885a090c1c2df393d09[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Sat May 18 10:19:43 2024 +0500
+
+    add date of birth
+
+[33mcommit 6e179c040107897127afc6d56c105a86c1f40bba[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Sat May 18 10:09:49 2024 +0500
+
+    add calender
+
+[33mcommit 48b2ec087c6f9f4fc452462daee05a805f7aaf0c[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Sat May 18 09:56:40 2024 +0500
+
+    add radio button
+
+[33mcommit 20743b77d31d9f15119b1d3cf52b4d15e37f09ee[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Sat May 18 08:46:36 2024 +0500
+
+    checkbox completd
+
+[33mcommit 315b530e4b434bcde29d428e1c8a338f6e101689[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Sat May 18 08:42:21 2024 +0500
+
+    add checkbox btn
+
+[33mcommit 1ec46e130630c497fc399949664d5ecb9c6b9ada[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Sat May 18 07:48:36 2024 +0500
+
+    add checkbox btn
+
+[33mcommit e2876e63f2784be16517773ffd14e2bc865a3edc[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Thu May 16 23:20:08 2024 +0500
+
+    add new skills checkbox
+
+[33mcommit 76d25f68a944a3720df9a9357ad4f1741e116988[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Thu May 16 23:02:08 2024 +0500
+
+    add checkbox button
+
+[33mcommit 795cc24e7168e3ce020db9af16ea2adad01f62d6[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Thu May 16 22:23:14 2024 +0500
+
+    add radio button completed
+
+[33mcommit 52d16157d5b1bca76c3c6a69f724ffd617897bbf[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Thu May 16 22:15:08 2024 +0500
+
+    add new radio button
+
+[33mcommit 12cae5d20647ba3d528dddf4dd359afab0b1802b[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Wed May 15 00:54:55 2024 +0500
+
+    add gender field
+
+[33mcommit 955f9f5565fa2dc84d06f786046890f57b30f423[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Wed May 15 00:33:05 2024 +0500
+
+    add radio button
+
+[33mcommit d2a2bc1912da799d1f0a9f63fd441194daec8688[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Wed May 15 00:28:16 2024 +0500
+
+    add togglebutton group
+
+[33mcommit 5b704c793eb511eb8c8e9989e08f7d391821cc8c[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Tue May 14 08:57:04 2024 +0500
+
+    add toggle group
+
+[33mcommit 5b583a69c10f902a346163e56c493b9d03a4cfc2[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Tue May 14 08:31:38 2024 +0500
+
+    add toggle button
+
+[33mcommit 64aa3e1e94ef4d8ab7e5f4fbfce9ca44c98132fa[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Tue May 14 07:12:23 2024 +0500
+
+    add new folder named queries
+
+[33mcommit ac5c7a4fd4dd51d8434f7dc318b0f7509b8ff8bc[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Mon May 13 23:47:18 2024 +0500
+
+    add watch
+
+[33mcommit 836e4ad245d4f1c29d727203d0ebd8470d06b8fd[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Mon May 13 23:31:40 2024 +0500
+
+    add new field which is not required
+
+[33mcommit 58e0b55bd83f06e9fdb840ae7ad9fa4848711a06[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Mon May 13 22:14:47 2024 +0500
+
+    add drop down menu
+
+[33mcommit e7b79d6e8b9bd71fb2e7d40c572719681abedc5e[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Sat May 11 20:40:20 2024 +0500
+
+    add dropdownmenu field
+
+[33mcommit 9a8b76b99343d48a59bc087265d8f47494c1862b[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Fri May 10 20:33:11 2024 +0500
+
+    add selectable field
+
+[33mcommit 34ed796df0020e08d5a08d6c264a05e46ae63cd8[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Fri May 10 08:53:22 2024 +0500
+
+    add controller of react hooks form
+
+[33mcommit 990e77a5c18498f0f3c2e0683a7dfed07cf99349[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Thu May 9 23:44:34 2024 +0500
+
+    add select component
+
+[33mcommit 47d97f50b8ec4d9da40e2f7329acaf10efce3d25[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Thu May 9 23:21:31 2024 +0500
+
+    error handle in tsx file
+
+[33mcommit a1b69ca0ad940ab98988bb06027efdeabd472484[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Thu May 9 22:56:49 2024 +0500
+
+    create new folder
+
+[33mcommit 31851f4337ea7051e11ca2534bdcd77ef7e7ebd4[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Thu May 9 22:42:46 2024 +0500
+
+    show erro
+
+[33mcommit 213a72b9d05af980c929508b6c9f3d049838621a[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Wed May 8 22:41:06 2024 +0500
+
+    get types
+
+[33mcommit ace4af1d10bdbe044794a0dc649bfb79f8d3f1ff[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Wed May 8 22:24:06 2024 +0500
+
+    integrete zod schema
+
+[33mcommit 3cb21fbe7589f2f2e9459b3320fcba0c57812c69[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Wed May 8 22:12:04 2024 +0500
+
+    basic form
+
+[33mcommit eceea130c2d1acac7b7500c8de6101b31fd78cba[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Wed May 8 21:09:46 2024 +0500
+
+    install date-dns
+
+[33mcommit a26f6bc0e87469fbed103f393fd393de583e801c[m
+Author: syedalirazazaidi <aaliraza007@hotmail.com>
+Date:   Wed May 8 14:34:52 2024 +0500
+
+    add design
+
+[33mcommit 20cf1fd0b86df538fbd97a3e28142f7e8172dd53[m
+Author: syedalirazazaidi <aaliraza007@hotmail.com>
+Date:   Wed May 8 14:28:34 2024 +0500
+
+    add schema
+
+[33mcommit 5956d59ecce670a918271bcbb7b910d836841a49[m
+Author: syedalirazazaidi <aaliraza007@hotmail.com>
+Date:   Wed May 8 11:48:27 2024 +0500
+
+    add forms
+
+[33mcommit 35d5f3bf060391a4991cd6fee1c92461468483b6[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Tue May 7 21:37:25 2024 +0500
+
+    completed part 1
+
+[33mcommit 6f30ac25fd7fb87fd0d844083d1090d072cb5163[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Tue May 7 07:55:10 2024 +0500
+
+    add seelcet option to space up response time
+
+[33mcommit dce2c5bb7d51bc212a01449aa2e04441f8568ab7[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Mon May 6 22:39:45 2024 +0500
+
+    add slice method
+
+[33mcommit c28e3aa5cac9f6870497034f20ea4248207f505a[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Mon May 6 22:35:26 2024 +0500
+
+    get data using react query
+
+[33mcommit 8e41993dbbd018c29ae5a2ab1f68d6869332cf7a[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Mon May 6 21:35:30 2024 +0500
+
+    add debugging tools
+
+[33mcommit e9d8d88f8751ab94c40d646303286ea53db386f7[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Mon May 6 21:29:20 2024 +0500
+
+    add queryprovider
+
+[33mcommit a75a81b361edb9d432add4b241eca07adffd1a1e[m
+Author: syedalirazazaidi <46336938+syedalirazazaidi@users.noreply.github.com>
+Date:   Mon May 6 21:16:07 2024 +0500
+
+    add tanstack installation
